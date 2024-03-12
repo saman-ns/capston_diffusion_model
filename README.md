@@ -36,3 +36,10 @@ Designed primarily for landscape generation, MoodVista streamlines the creation 
 
 ## development 
 A sample project will be added to showcase the capabilities of the addon 
+
+
+## scrpts
+Ui_menu: the script is a general template to generate the basic UI for the addon 
+diffusion-model-test: a separate application made to test the diffusion model that will be used in the addon
+operator_mesh_uc: the template required to transfer the result of the diffusion model to the mesh 
+integration: part of the case study to understand the texture generation in a blender with diffusion models: This code defines a deep learning model called SeamlessModel that is used for image processing tasks. The model consists of convolutional and recurrent neural network layers. It takes an input image tensor and applies a series of convolutional operations to extract features. The features are then passed through a Gated Recurrent Unit (GRU) layer to capture temporal dependencies. Finally, the output is passed through a linear layer with a sigmoid activation function to produce a single output value. 
