@@ -323,27 +323,7 @@ def main():
         (EdgeDataset('train/samples4x'), EdgeDataset('valid/samples4x'))
     ]
 
-    # Though it's possible to keep training and validation samples in the same dataset, you really shouldn't.
-    # If you add new samples to a dataset that's being used like this DO NOT resume a previously trained model.
-    # Training and validation samples will get reshuffled and your validation samples will likely be overfit.
-    # gen = torch.Generator().manual_seed(132)
-    # datasets = [
-    #     torch.utils.data.random_split(EdgeDataset('samples'), [.8, .2], gen),
-    #     torch.utils.data.random_split(EdgeDataset('samples2x'), [.8, .2], gen),
-    #     torch.utils.data.random_split(EdgeDataset('samples4x'), [.8, .2], gen)
-    # ]
 
-    # If you're generating new samples it can be useful to modify generator_process/actions/prompt_to_image.py
-    # to automatically save images to the dataset. It's best to keep them separate at first and run a previously
-    # trained model on them to help find bad samples. Stable diffusion can at times add solid colored borders to
-    # the edges of images that are not meant to be seamless. I recommend deleting all samples where an edge
-    # appears seamless with scrutiny but was not generated to be, don't move it to another folder in the dataset.
-    # datasets = [
-    #     (None, EdgeDataset('tmp'))
-    # ]
-
-    # If you only want to validate a saved model.
-    # datasets = [(None, valid) for _, valid in datasets]
 
     train_datasets = []
     valid_datasets = []
@@ -356,14 +336,10 @@ def main():
     try:
         if len(train_datasets) > 0:
             train(model, train_datasets, valid_datasets, epochs=50, training_rate=0.001)
-            # It should easily converge in under 50 epochs.
-            # Training rate is a little high, but I've never managed better
-            # results with a lower rate and several times more epochs.
+
     except KeyboardInterrupt:
         pass
 
-    # As long as your images have meaningful names you can get feedback on
-    # what kind of images aren't detecting well to add similar samples.
     model.train(False)
     validate(model, valid_datasets)
 
