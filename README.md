@@ -1,14 +1,14 @@
-# MoodVista: Blender Addon for Enhanced Story Previsualization
+# StyleBlender: Blender Addon for Enhanced Story Previsualization
 
 
 ## Overview
-MoodVista is a revolutionary Blender addon designed to integrate stable diffusion technology into 3D storytelling and previsualization workflows. This tool empowers 3D artists to bring their visions to life with unprecedented speed and stylistic flexibility. By using a combination of reference images to fine-tune diffusion models and depth maps for composition guidance, MoodVista facilitates the creation of detailed, stylized scenes directly from simple blockouts and textual prompts. Whether you're exploring new narrative landscapes or refining the visual tone of your project, MoodVista accelerates your creative process, offering a closer glimpse into the final outcome during the previsualization stage.
+In this project. I am aiming to utilize a diffusion model, in this case, one of the stable diffusion models from stability AI, to develop a tool for 3d artists. the tool is in the form of an add-on for the 3d software Blender3d. it will generate textures for the objects and scenes using a prompt from the artist and the rendering of the scene as a visual prompt.
 
 ## Problem Statement
 This project aims to integrate the power of diffusion models into the 3d workflow of an animation project specifically for the previsualization parts. making it easier to develop the style of the project 
 
 ## Data Science Solution  
-the addon uses the mood board to train a diffusion model using the data provided by the artist to optimize the visual development of the animation 
+using generative AI, specifically diffusion models, the process of texturing objects in a 3d scene can be automated. The struggle so far in this space has been the integration of the tool into the working pipeline. and the lack of fine-tuning of the models available for this purpose.
 
 ## Features
 Style Customization: Fine-tune diffusion models using reference images to align with your project's visual style.
@@ -21,6 +21,13 @@ Rapid Previsualization: Accelerate the previsualization process, enabling artist
 Blender version 4.5 or higher.
 An active Hugging Face account with the necessary credentials.
 Note: The addon is currently in development and not yet available for installation.
+
+## first steps
+To better understand the diffusion models, I made a diffusion model from Sctach with PyTorch. the model was built based on the research papers listed below:
+1."Denoising Diffusion Probabilistic Models" (https://arxiv.org/abs/2006.11239v2)
+2."Diffusion Models Beat GANs on Image Synthesis: (https://doi.org/10.48550/arXiv.2105.05233)
+
+##The link for the model repository is here (this model was not used to generate the images in the tool being developed. it was helpful in understanding the architecture and how integrate it with into the software)
 
 
 ## Installation
