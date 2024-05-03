@@ -1,4 +1,4 @@
-# StyleBlender: Blender Addon for Enhanced Story Previsualization
+# StyleBlender: Blender Addon for Speed up StoryTelling
 
 
 ## Overview
@@ -25,13 +25,18 @@ Note: The addon is currently in development and not yet available for installati
 ## first steps
 To better understand the diffusion models, I made a diffusion model from Sctach with PyTorch. the model was built based on the research papers listed below:
 1."Denoising Diffusion Probabilistic Models" (https://arxiv.org/abs/2006.11239v2)
-2."Diffusion Models Beat GANs on Image Synthesis: (https://doi.org/10.48550/arXiv.2105.05233)
+2."Diffusion Models Beat GANs on Image Synthesis" (https://doi.org/10.48550/arXiv.2105.05233)
 
 ##The link for the model repository is here (this model was not used to generate the images in the tool being developed. it was helpful in understanding the architecture and how integrate it with into the software)
 
+## Additional models
+gaining a better underestanding on how diffusion models work. In order to have control over the composition of the output to generate textures required for each object. an additional pre-processor needs to be used, ControlNets, are neural network architecture to add spatial conditioning controls to large, pretrained text-to-image diffusion models. these models were initially introduced in this paper:
+ "Adding Conditional Control to Text-to-Image Diffusion Models", https://arxiv.org/abs/2302.05543
+
+
 
 ## Installation
-The installation guide will be provided upon the addon's completion. Stay tuned for updates on the development process and release information.
+Download the code az a zipfile and in blender -> prefrences -> add-ons -> StyleBlender
  
  
 ## featuring:
