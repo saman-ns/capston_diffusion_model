@@ -30,9 +30,11 @@ To better understand the diffusion models, I made a diffusion model from Sctach 
 ##The link for the model repository is here (this model was not used to generate the images in the tool being developed. it was helpful in understanding the architecture and how integrate it with into the software)
 
 ## Additional models
-gaining a better underestanding on how diffusion models work. In order to have control over the composition of the output to generate textures required for each object. an additional pre-processor needs to be used, ControlNets, are neural network architecture to add spatial conditioning controls to large, pretrained text-to-image diffusion models. these models were initially introduced in this paper:
+gaining a better understanding on how diffusion models work. In order to have control over the composition of the output to generate textures required for each object. an additional pre-processor needs to be used, ControlNets, are neural network architecture to add spatial conditioning controls to large, pre-trained text-to-image diffusion models. these models were initially introduced in this paper:
  "Adding Conditional Control to Text-to-Image Diffusion Models", https://arxiv.org/abs/2302.05543
 
+and with the below Architecture they allow an added level of control over the outcome, in the case of this project the condition used is the depth data of the picture:
+![alt text](Controlnet.JPG)
 
 
 ## Installation
@@ -50,11 +52,25 @@ Designed primarily for landscape generation, MoodVista streamlines the creation 
 A sample project will be added to showcase the capabilities of the addon 
 
 
-## scrpts
-Ui_menu: the script is a general template to generate the basic UI for the addon 
+## scripts
+ui folder: containing the ui_panels.py file, it configures how the add-on looks in the blender software
 
-diffusion-model-test: a separate application made to test the diffusion model that will be used in the addon
+sd_backend: containing two files that manage api calls to stability_api (hosts the diffusion model from stable diffusion) and automatic1111_api (used to do the pre-processing as it manages the control api )
 
-operator_mesh_uc: the template required to transfer the result of the diffusion model to the mesh 
+__init__: the initial file that will run in order to register all the components and set up the models
 
-integration: part of the case study to understand the texture generation in a blender with diffusion models: This code defines a deep learning model called SeamlessModel that is used for image processing tasks. The model consists of convolutional and recurrent neural network layers. It takes an input image tensor and applies a series of convolutional operations to extract features. The features are then passed through a Gated Recurrent Unit (GRU) layer to capture temporal dependencies. Finally, the output is passed through a linear layer with a sigmoid activation function to produce a single output value. 
+config: configuring how add-on is set up for the first time of installation
+
+handlers:
+
+operators: Blender3D uses operators as a part of the api to handle different tasks this file hosts most of the functionality of the add-on with referenced for different methods 
+
+Prefrences:
+
+task_queue:
+
+
+
+
+
+
