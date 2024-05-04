@@ -1,13 +1,14 @@
 bl_info = {
-    "name": "Style Blender",
-    "description": "Create textures and objects using AI",
-    "author": "Sami",
+    "name": "Style alender",
+    "description": "Create amazing images using Stable Diffusion AI",
+    "author": "Ben Rugg",
     "version": (1, 0, 1),
-    "blender": (4, 0, 0),
-    "location": "Image Editor -> Sidebar -> Style Blender",
+    "blender": (3, 0, 0),
+    "location": "Render Properties > AI Render",
     "warning": "",
-    "doc_url": "https://github.com/saman-ns/capston_diffusion_model",
-    "category": "Textures",
+    "doc_url": "https://github.com/benrugg/AI-Render#readme",
+    "tracker_url": "https://github.com/benrugg/AI-Render/issues",
+    "category": "Render",
 }
 
 
