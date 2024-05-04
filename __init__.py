@@ -66,7 +66,6 @@ def register():
     properties.register()
     task_queue.register()
     ui_panels.register()
-    ui_preset_styles.register()
 
 
 def unregister():
@@ -79,7 +78,6 @@ def unregister():
     properties.unregister()
     task_queue.unregister()
     ui_panels.unregister()
-    ui_preset_styles.unregister()
 
 
 if __name__ == "__main__":
