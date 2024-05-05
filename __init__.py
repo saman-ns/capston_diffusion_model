@@ -1,13 +1,11 @@
 bl_info = {
-    "name": "Style alender",
+    "name": "Style blender",
     "description": "Create amazing images using Stable Diffusion AI",
-    "author": "Ben Rugg",
+    "author": "Saman",
     "version": (1, 0, 1),
     "blender": (3, 0, 0),
-    "location": "Render Properties > AI Render",
-    "warning": "",
-    "doc_url": "https://github.com/benrugg/AI-Render#readme",
-    "tracker_url": "https://github.com/benrugg/AI-Render/issues",
+    "location": "Render Properties > style Blender",
+    "doc_url": "https://github.com/saman-ns/capston_diffusion_model",
     "category": "Render",
 }
 
